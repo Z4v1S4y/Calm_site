@@ -1,2 +1,2 @@
 # Calm_site
-«Мій  адаптивний сайт»
+«My project GitHub»
