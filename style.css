@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+textarea,
+input {
+  border: none;
+  outline: none;
+  background: inherit;
+}
+
+nav {
+  background-image: linear-gradient(to top left, #483aa0, #e3d095);
+  min-width: 320px;
+}
+
+.NavMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+  li {
+    display: flex;
+    height: 50px;
+    gap: 20px;
+  }
+}
+
+.NavLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Logo {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.Menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.MenuBlock {
+  height: 4px;
+  border-radius: 2px;
+  width: 0%;
+  background-color: transparent;
+  transition: width 0.9s ease;
+}
+
+.MenuLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover {
+    .MenuBlock {
+      background-color: #fffa8d;
+      width: 100%;
+    }
+  }
+}
+
+.NavMenu2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  font-size: 25px;
+  p {
+    padding: 20px 1px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .NavMenu2 {
+    font-size: 18px;
+  }
+  @media (max-width: 769px) {
+    .NavMenu2 {
+      font-size: 15px;
+    }
+    @media (max-width: 469px) {
+      .NavMenu2 {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  background-image: linear-gradient(to top right, #725cad 500px, #0b1d51);
+}
+
+/* гори */
+
+.FlexWrapper {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Palatino Linotype";
+  color: #d1d8be;
+}
+
+.BigImages {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 5px 5px 0px red;
+}
+
+.BigImages h2,
+.BigImages h3,
+.BigImages p,
+.BigImages span {
+  margin-left: 10px;
+}
+
+.BigImages img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin-top: 20px;
+}
+
+.RightSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 5px 5px 0px red;
+}
+
+.SmallImages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.SmallImages h2,
+.SmallImages h3,
+.SmallImages span {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.SmallImages img {
+  width: 100%;
+  max-height: 190px;
+  object-fit: cover;
+  display: block;
+  margin-top: 20px;
+}
+
+.BigImages,
+.SmallImages {
+  text-align: left;
+}
+
+.BigImages,
+.SmallImages {
+  overflow: hidden;
+  position: relative;
+}
+
+.BigImages img,
+.SmallImages img {
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.BigImages:hover img,
+.SmallImages:hover img {
+  transform: scale(1.1);
+}
+
+/* фото дрон */
+.ArtWrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Palatino Linotype";
+  color: #d1d8be;
+}
+
+.TwoImagesRow {
+  display: flex;
+  gap: 30px;
+}
+
+.ImageBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0px 5px 5px 0px red;
+}
+
+.ImageBlock img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.ImageBlock h3,
+.ImageBlock h2,
+.ImageBlock span {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.ImageBlock img {
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ImageBlock:hover img {
+  transform: scale(1.1);
+}
+
+/* фото ручка комютер */
+.SectionImage {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-family: "Palatino Linotype";
+  color: #d1d8be;
+}
+
+.CalmImageBlock {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0px 5px 5px 0px red;
+}
+
+.CalmImages img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.CalmImagesBlock {
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.CalmImagesBlock {
+  transform: scale(1.1);
+}
+
+.CalmImageBlock h3,
+.CalmImageBlock h2,
+.CalmImageBlock span {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* для Анкета */
+
+.NewsletterWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 50px auto;
+  margin-top: 150px;
+  font-family: "Palatino Linotype";
+  color: #d1d8be;
+}
+
+.NewsletterText {
+  flex: 1;
+  h2 {
+    margin: 20px 0px;
+  }
+  p {
+    max-width: 340px;
+  }
+}
+
+.NewsletterForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.NewsletterForm input,
+.NewsletterForm button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.NewsletterForm button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.NewsletterForm button:hover {
+  background-color: #45a049;
+}
+
+/* текс з картинкою */
+
+.TextWrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 200px;
+  font-family: "Palatino Linotype";
+  color: #eaebd0;
+}
+
+.TextWrapper li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.TextImages {
+  flex-shrink: 0;
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.TextImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.TextWrapper li .TextImages + h3,
+.TextWrapper li .TextImages + h3 + h4,
+.TextWrapper li .TextImages + h3 + h4 + span {
+  margin-left: 0;
+}
+
+.TextWrapper li:not(:has(.TextImages)) {
+  padding-left: 170px;
+  flex-direction: column;
+}
+
+.TextWrapper li h3,
+.TextWrapper li h4,
+.TextWrapper li span {
+  margin: 5px 0;
+  max-width: 700px;
+}
+
+.archive-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(90deg, #007bff 50%, #0056b3 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: background-position 0.5s ease;
+  cursor: pointer;
+}
+
+.archive-button:hover {
+  background-position: right bottom;
+}
+
+.material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* footer */
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.FooterContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.NavLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #eee;
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.NavLink .Logo {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 8px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.FooterContent p {
+  flex: 1 1 300px;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #bbb;
+}
+
+.FooterMenu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.FooterMenu h4 {
+  margin: 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: #eee;
+  transition: color 0.3s ease;
+}
